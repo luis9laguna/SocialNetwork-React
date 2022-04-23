@@ -1,0 +1,8 @@
+.containerAuth{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to right top, #2374e1, #305ab6, #2f438d, #272d66, #1b1942);
+}

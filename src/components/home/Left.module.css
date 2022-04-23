@@ -1,0 +1,33 @@
+.leftContainer{
+    flex: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: sticky;
+    overflow-y: auto;
+    top: 4rem;
+    height: calc(100vh - 4rem);
+}
+
+.leftContainer > button:first-of-type {
+    margin-top: 4rem;
+}
+
+.leftContainer > button{
+    margin-top: 2rem;
+    height: 3rem;
+    border-radius: 1.5rem;
+    border: 3px solid var(--primary);
+    background-color: var(--primary);
+    width: 60%;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.562) 0px 5px 15px;
+    font-size: var(--size-1);
+    font-weight: bold;
+}
+
+.leftContainer > button:hover{
+    background-color: var(--secondary);
+    color: var(--light);
+}
