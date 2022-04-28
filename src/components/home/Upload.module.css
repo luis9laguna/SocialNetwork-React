@@ -1,0 +1,105 @@
+.containerPrev {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+}
+.isDraggingOver {
+  transition: all 0.3s ease-in-out;
+  height: 140px;
+}
+.isDragging {
+  background-color: var(--primary);
+}
+
+.prevImage {
+  position: relative;
+}
+
+.img {
+  object-fit: contain;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+}
+
+.prevImage:hover > .containerCheckBox {
+  opacity: 1;
+}
+
+.containerCheckBox {
+  opacity: 0;
+  width: 100%;
+  height: 100% !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 3;
+  transition: all 0.5s ease-in-out;
+}
+.containerCheckBox input {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  cursor: pointer;
+  height: 1.3rem;
+  width: 1.3rem;
+}
+
+.selectedImages {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 2px solid var(--primary);
+  background-color: var(--primary);
+  height: 2rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.562) 0px 5px 15px;
+  font-size: var(--size-05);
+  font-weight: bold;
+  width: 100%;
+  margin: 1rem;
+  border-radius: 1rem;
+  color: var(--light);
+}
+.selectedImages:hover {
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+
+.buttonInput{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 2px solid var(--primary);
+  background-color: var(--primary);
+  height: 2rem;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.562) 0px 5px 15px;
+  font-size: var(--size-05);
+  font-weight: bold;
+  width: 3rem;
+  margin: 1rem;
+  border-radius: 1rem;
+  color: var(--light);
+}
+
+.buttonInput:hover{
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+
+@media (max-width: 600px){
+  .img {
+    width: 70px;
+    height: 70px;
+    margin: 5px;
+ }
+  .containerCheckBox {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+}

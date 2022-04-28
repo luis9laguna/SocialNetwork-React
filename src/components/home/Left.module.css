@@ -14,6 +14,9 @@
 }
 
 .leftContainer > button{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
     margin-top: 2rem;
     height: 3rem;
     border-radius: 1.5rem;
@@ -25,9 +28,16 @@
     box-shadow: rgba(0, 0, 0, 0.562) 0px 5px 15px;
     font-size: var(--size-1);
     font-weight: bold;
+    color: var(--light);
 }
 
 .leftContainer > button:hover{
     background-color: var(--secondary);
-    color: var(--light);
+    color: var(--primary);
+}
+
+@media (max-width: 768px){
+    .leftContainer{
+        display: none;
+    }
 }

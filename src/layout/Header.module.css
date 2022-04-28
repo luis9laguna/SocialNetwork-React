@@ -1,6 +1,5 @@
 .headerContainer{
     display: flex;
-    justify-content: space-between;
     padding: 0.7rem 2rem;
     background-color: var(--primary);
     align-items: center;
@@ -8,7 +7,121 @@
     color: var(--light);
     position: sticky;
     top: 0;
-    z-index: 9999;
+    z-index: 2;
+    justify-content: space-evenly;
+}
+
+.headerContainer > * {
+    margin: 0 2rem;
+}
+
+.links{
+    display: flex;
+}
+
+.links > a{
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.links > a:hover > svg{
+    color: var(--secondary);
+}
+
+.links svg{
+    font-size: 1.8rem;
+    transition: all 0.3s ease-in-out
+}
+
+.profileContainer{
+    display: flex;
+}
+
+.open .dropDown {
+    opacity: 1;
+    transform: translate(0, 0);
+    pointer-events: auto;
+}
+
+.imageNameContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imageNameContainer img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: block;
+}
+
+.imageNameContainer span{
+    text-transform: capitalize;
+    margin-left: 0.4rem;
+    font-size: var(--size-2);
+    font-weight: bold;
+}
+
+
+.dropDown{
+    list-style: none;
+    position: absolute;
+    z-index: 5;
+    pointer-events: none;
+    right: 9.5vw;
+    position: absolute;
+    margin-top: 50px;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+    transform: translateY(30px);
+}
+
+.dropDown::after{
+    position: absolute;
+    content: "";
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid var(--background);
+    top:-7px;
+    left: 50%;
+}
+
+
+.dropDown > * {
+    display: flex;
+    justify-content: center;
+    font-size: var(--size-2);
+    color: var(--light);
+    background: var(--background);
+    padding: 1rem;
+    font-family: inherit;
+    border: none;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.dropDown > *:hover {
+    color: var(--primary);
+    background: var(--secondarylight);
+}
+
+.dropDown > a{
+    border-bottom: 1px solid var(--primary);
+}
+
+.arrow::after{
+    content: "";
+    width: 15px;
+    height: 15px;
+    transform: rotate(45deg);
+    display: block;
+    background: red;
+    position: absolute;
+    z-index: 110;
 }
 
 .searchContainer {
@@ -21,6 +134,7 @@
 
 .searchContainer > input{
     width: 100%;
+    min-width: 8rem;
     height: 2.5rem;
     border-radius: 1rem;
     border-color: transparent;
@@ -38,4 +152,32 @@
     cursor: pointer;
     right: 1%;
     color: var(--primary);
+}
+
+
+.containerLoading{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 768px){
+
+    .headerContainer{
+        justify-content: space-between;
+        padding: 0.7rem 0.5rem;
+    } 
+    .headerContainer span{
+        display: none;
+    } 
+    .headerContainer > * {
+        margin: 0;
+    }
+
+    .dropDown{
+        right: 5vw;
+    }
 }

@@ -1,4 +1,3 @@
-import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import AuthState from './context/authState';
 
@@ -28,7 +27,7 @@ function App() {
           <Route path='/' element={<Header />}>
             <Route index element={<Home />} />
             <Route path="search" element={<LayoutSearch />}>
-              <Route path=':term' element={<AllSearch />} />
+              <Route index path='all/:term' element={<AllSearch />} />
               <Route path='users/:term' element={<UserSearch />} />
               <Route path='posts/:term' element={<PostSearch />} />
             </Route>

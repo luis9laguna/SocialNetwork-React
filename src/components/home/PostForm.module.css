@@ -1,0 +1,77 @@
+.inputContainer{
+    margin: 4rem;
+    border-radius: 1rem;
+    background-color: var(--secondarylight);
+    color: var(--light);
+    display: flex;
+    flex-direction: column;
+    min-width: 250px;
+}
+
+.imageInput{
+    display: flex;
+    margin: 1rem;
+    align-items: center;
+}
+
+.imageInput img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.imageInput input {
+    width: 100%;
+    height: 2.5rem;
+    background-color: var(--background);
+    border-radius: 1rem;
+    padding-left: 5px;
+    color: var(--light);
+    border: none;
+}
+
+.postOptions{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.postOptions::after{
+    content: "";
+    width: 95%;
+    border-top: 1px solid var(--background);
+    margin: 0 1rem;
+    position: absolute;
+}
+
+
+.postOptions button{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 2px solid var(--primary);
+    background-color: var(--primary);
+    height: 2rem;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.562) 0px 5px 15px;
+    font-size: var(--size-05);
+    font-weight: bold;
+    width: 6rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    color: var(--light);
+}
+
+.postOptions button:hover{
+    background-color: var(--secondary);
+    color: var(--primary);
+}
+
+@media (max-width: 600px){
+    .inputContainer {
+      margin: 3rem 1.5rem;
+    }
+  }

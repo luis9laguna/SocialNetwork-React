@@ -1,0 +1,29 @@
+.containerLayout{
+    display: flex;
+}
+
+
+.containerLayout > div {
+    flex: 30%;
+    top: 4rem;
+    height: calc(100vw - 4rem);
+    position: sticky;
+    overflow-y: auto;
+    margin: 1rem;
+}
+
+.containerLayout h1{
+    font-size: var(--size-2);
+}
+
+.filterContainer h2{
+    font: var(--size-1);
+}
+
+.filterContainer li{
+    padding: 1rem;
+}
+
+.containerLayout > main{
+    flex: 70%;
+}
